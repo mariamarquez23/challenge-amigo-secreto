@@ -23,5 +23,12 @@ function actualizarAmigos() {
 }
 
 function sortearAmigos() {
-
+    if (listaNombres.length == 0) {
+        alert('No hay amigos para sortear.');
+    }
+    let resultado = document.querySelector("#resultado");
+    let amigoSecreto = listaNombres[Math.floor(Math.random() * listaNombres.length)];
+    resultado.innerHTML = `${amigoSecreto}`;
+    document.querySelector(".button-draw").disabled = true;
+    document.querySelector(".button-draw").disabled = true;
 }

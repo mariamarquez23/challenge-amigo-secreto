@@ -1,7 +1,7 @@
 let listaNombres = [];
 
 function agregarAmigos() {
-    const nombre = document.getElementById("amigo").value;
+    let nombre = document.getElementById("amigo").value;
     if (nombre != "") {
         listaNombres.push(nombre);
         actualizarAmigos();
@@ -12,11 +12,11 @@ function agregarAmigos() {
 }
 
 function actualizarAmigos() {
-    const nombres = document.querySelector("#listaAmigos");
+    let nombres = document.querySelector("#listaAmigos");
     nombres.innerHTML = "";
     for (let i = 0; i < listaNombres.length; i++) {
-        const nombre = listaNombres[i];
-        const li = document.createElement("li");
+        let nombre = listaNombres[i];
+        let li = document.createElement("li");
         li.textContent = nombre;
         nombres.appendChild(li);
     }

@@ -1,17 +1,17 @@
 let listaNombres = [];
 
-function agregarAmigos() {
+function agregar() {
     let nombre = document.getElementById("amigo").value;
     if (nombre != "") {
         listaNombres.push(nombre);
-        actualizarAmigos();
+        actualizar();
     } else {
         alert("Ingrese un nombre válido.");
     }
     document.getElementById("amigo").value = "";
 }
 
-function actualizarAmigos() {
+function actualizar() {
     let nombres = document.querySelector("#listaAmigos");
     nombres.innerHTML = "";
     for (let i = 0; i < listaNombres.length; i++) {
@@ -22,7 +22,7 @@ function actualizarAmigos() {
     }
 }
 
-function sortearAmigos() {
+function sortear() {
     if (listaNombres.length == 0) {
         alert('No hay amigos para sortear.');
     } else {

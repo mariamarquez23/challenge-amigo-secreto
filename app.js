@@ -25,10 +25,10 @@ function actualizarAmigos() {
 function sortearAmigos() {
     if (listaNombres.length == 0) {
         alert('No hay amigos para sortear.');
+    } else {
+        let resultado = document.querySelector("#resultado");
+        let amigoSecreto = listaNombres[Math.floor(Math.random() * listaNombres.length)];
+        resultado.innerHTML = `El amigo secreto sorteado es: ${amigoSecreto}`;
+        document.querySelector("#listaAmigos").style.display = "none";
     }
-    let resultado = document.querySelector("#resultado");
-    let amigoSecreto = listaNombres[Math.floor(Math.random() * listaNombres.length)];
-    resultado.innerHTML = `${amigoSecreto}`;
-    document.querySelector(".button-draw").disabled = true;
-    document.querySelector(".button-draw").disabled = true;
 }
